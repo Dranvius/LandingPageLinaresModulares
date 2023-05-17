@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@1,200&family=Merriweather+Sans:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+/*Navbar - menu */
+
+a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Archivo', sans-serif;
+    font-size: 18px;
+}
+
+#navBar-container img{
+    height: 50px;
+    width: 50px;
+    padding-right: 10px;
+}
+
+#navBar-container{
+
+    display: flex;
+    height: 70px;
+    background: #0c1f54;
+
+}
+
+#contacted
+    {
+        
+        height: 0px;
+        width: 100px;
+        border-right: 0px solid transparent;
+        border-left: 200px solid transparent;
+        border-bottom: 70px solid #ffffff;
+        color: #0c1f54;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        
+      
+}
+
+
+#contacted #contacted-text:hover{
+    position: absolute;
+    top: 32px;
+    right: 10px;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: green;
+    transform:translateY(5px);
+    -webkit-transform:translateY(5px);
+    -moz-transform:translateY(5px);
+    -ms-transform:translateY(5px);
+    -o-transform:translateY(5px);
+}
+
+
+#contacted #contacted-text{
+    position: absolute;
+    top: 32px;
+    right: 10px;
+    font-family: 'Merriweather Sans', sans-serif
+}
+
+
+
+#navBar-container #pic_text{
+
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: 'Merriweather Sans', sans-serif
+}
+
+    /*
+    !Display de desarrollo
+    */
+
+/* #navBar-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+
+    /*
+    !Permite colapsar la lista para que se vea como si fuera un menu de navegación
+    */
+
+#navBar-container >ul{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position:relative;
+    transition:1s;
+    align-items: center;
+    justify-content: flex-start;
+    -webkit-transition:1s;
+    -moz-transition:1s;
+    -ms-transition:1s;
+    -o-transition:1s;
+    
+}
+
+#navBar-container > ul li{
+    display: table-cell;
+    display: table-cell;
+    margin-left: 40px;
+}
+
+#navBar-container > ul > li >ul {
+    display: none;
+    color:white;
+    font-family: 'Archivo', sans-serif;
+    
+}

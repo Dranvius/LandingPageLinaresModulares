@@ -1,0 +1,24 @@
+{
+  "name": "linaresmodulares-landingpage",
+  "version": "1.0.0",
+  "description": "Pagina web para la empresa linares modulares",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon src/server.js"
+  },
+  "keywords": [
+    "LandingPage"
+  ],
+  "author": "Sergio Linares",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22"
+  }
+}
