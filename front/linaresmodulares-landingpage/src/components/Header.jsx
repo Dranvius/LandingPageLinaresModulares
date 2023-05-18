@@ -13,10 +13,10 @@ export const Header = () => {
               <a href="#inicio">Inicio</a>
             </li>
             <li>
-              <a href="#servicios">Servicios</a>
+              <a href="#servicios">¿Quienés somos?</a>
             </li>
             <li>
-              <a href="#contacto">Contacto</a>
+              <a href="#contacto">Servicios</a>
             </li>
           </ul>
 
