@@ -1,35 +1,32 @@
-export const Principal = ( ) =>{
+export const Principal = () => {
     return (
         <>
-        
-        <div id="Contenedor-top">
+
+            <div id="Contenedor-top">
+
+                <div id="Text-contenedor-top">
+
+                    <h1>DISEÑO<br/>EMPRESARIAL</h1>
+
+                    <p>Instalación de mobiliario empresarial <br/>Profesional </p>
 
 
-        <div id="Text-contenedor-top">
+                    <span id="buttom_top_text" className ="buttom_Style">
+                    Hola mundo
+                    </span>
 
+                </div>
 
-        <h1>Hola</h1>
+                <div id="imgane-contenedor-top">
 
+                    <img src="./src/img/oficce.jpg" alt="hola" />
 
-        </div>
+                </div>
 
-        <div id="imgane-contenedor-top">
-
-
-        <h2>MUNDO</h2>
-
-
-        </div>
-
+            </div>
 
 
 
-
-
-        </div>
-        
-        
-        
         </>
     )
 }

@@ -1,29 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@1,200&family=Merriweather+Sans:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Wix+Madefor+Text&display=swap');
 
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
 
+.buttom_Style {
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    padding: 20px;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: white;
+    
+
+}
+
+
+.buttom_Style:hover {
+    background-color: white;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    padding: 20px;
+    color: #0c1f54;
+    cursor: pointer;
+
+    box-shadow: 2px 14px 20px 11px rgba(255, 255, 255, 0.42);
+    -webkit-box-shadow: 2px 14px 20px 11px rgba(255, 255, 255, 0.42);
+    -moz-box-shadow: 2px 14px 20px 11px rgba(255, 255, 255, 0.42);
+
+    /* transform: translateY(20px); */
+
+}
+
+
 /*Navbar - menu */
 
-a{
+
+a {
     color: white;
     text-decoration: none;
     font-family: 'Archivo', sans-serif;
     font-size: 18px;
 }
 
-#navBar-container img{
+#navBar-container img {
     height: 50px;
     width: 50px;
     padding-right: 10px;
 }
 
-#navBar-container{
+#navBar-container {
 
     display: flex;
     height: 80px;
@@ -31,35 +64,35 @@ a{
 
 }
 
-#contacted
-    {
-        
-        height: 0px;
-        width: 100px;
-        border-right: 0px solid transparent;
-        border-left: 200px solid transparent;
-        border-bottom: 80px solid #ffffff;
-        color: #0c1f54;
-        position: relative;
-        display: inline-block;
-        text-align: center;
-        
-        
-      
+#contacted {
+
+    height: 0px;
+    width: 100px;
+    border-right: 0px solid transparent;
+    border-left: 200px solid transparent;
+    border-bottom: 80px solid #ffffff;
+    color: #0c1f54;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+
+
 }
 
 
-#contacted #contacted-text:hover{
+#contacted #contacted-text:hover {
     position: absolute;
     top: 32px;
     right: 10px;
     font-family: 'Merriweather Sans', sans-serif;
     color: green;
+    cursor: pointer;
 
 }
 
 
-#contacted #contacted-text{
+#contacted #contacted-text {
     position: absolute;
     top: 32px;
     right: 10px;
@@ -68,7 +101,7 @@ a{
 
 
 
-#navBar-container #pic_text{
+#navBar-container #pic_text {
 
     color: white;
     display: flex;
@@ -76,7 +109,7 @@ a{
     font-family: 'Lato', sans-serif;
 }
 
-    /*
+/*
     !Display de desarrollo
     */
 
@@ -88,35 +121,35 @@ a{
 } */
 
 
-    /*
+/*
     !Permite colapsar la lista para que se vea como si fuera un menu de navegación
     */
 
-#navBar-container >ul{
+#navBar-container>ul {
     display: flex;
     overflow: hidden;
     width: 100%;
-    position:relative;
-    transition:1s;
+    position: relative;
+    transition: 1s;
     align-items: center;
     justify-content: flex-start;
-    -webkit-transition:1s;
-    -moz-transition:1s;
-    -ms-transition:1s;
-    -o-transition:1s;
-    
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+
 }
 
-#navBar-container > ul li{
+#navBar-container>ul li {
     display: table-cell;
     margin-left: 100px;
 }
 
-#navBar-container > ul > li >ul {
+#navBar-container>ul>li>ul {
     display: none;
-    color:white;
+    color: white;
     font-family: 'Archivo', sans-serif;
-    
+
 }
 
 
@@ -125,14 +158,105 @@ a{
 
 
 
-#Contenedor-top{
+#Contenedor-top {
 
     width: 100%;
+    /* height: 700px; */
+    background-color: #0c1f54;
+    display: grid;
+
+    /* grid-template-rows: 50% 50%; */
+    grid-template-columns: 50% 50%;
+
+
+}
+
+
+
+#Text-contenedor-top {
+    grid-row: 1/2;
+
+}
+
+
+#imgane-contenedor-top {
+    grid-column: 2/3;
+}
+
+
+
+/*Text - Left*/
+
+
+#Text-contenedor-top {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+
+}
+
+
+#Text-contenedor-top h1 {
+    color: white;
+    font-size: 90px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+
+#Text-contenedor-top p {
+    color: white;
+    font-size: 32px;
+    font-family: 'Wix Madefor Text', sans-serif;
+}
+
+#Text-contenedor-top h1 {
+    margin-left: 40px;
+}
+
+#Text-contenedor-top p {
+    margin-left: 40px;
+}
+
+
+/*pic*/
+
+
+#imgane-contenedor-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+
+}
+
+#imgane-contenedor-top img {
+
+    width: 800px;
+    height: 800px;
+
+
+
+}
+
+
+#buttom_top_text {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+
+
+/*Proyects*/
+
+#Proyecto_Container{
+
+    background-color: red;
+    width: 100%;
     height: 700px;
-    background-color: blue;
-    display:grid;
-    
-    grid-row: 20% 20%;
 
 
 }
