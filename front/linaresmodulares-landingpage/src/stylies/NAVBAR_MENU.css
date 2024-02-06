@@ -1,0 +1,192 @@
+/*
+!Navbar - menu 
+*/
+
+
+a {
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
+    color:#0c1f54;
+}
+
+#navBar-container #logo_linares_modulares {
+    width: 4rem;
+    height: 4rem;
+}
+
+#navBar-container p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+
+#navBar-container #contenedor_flex{
+    display: flex;
+    width: 14rem;
+    font-size: 20px;
+    margin-right: 20rem;
+    margin-left: 0.5%;
+    align-items: center;
+}
+
+a {
+    
+    text-decoration: none;
+
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .2s;
+    -webkit-transition: background-size .2s;
+    -moz-transition: background-size .2s;
+    -ms-transition: background-size .2s;
+    -o-transition: background-size .2s;
+    
+}
+
+
+#navbar-icon{
+    width: 20%;
+    margin-left: 1rem;
+    margin-right: 1rem;    
+}
+
+a:hover:not(#facebook,#whatsapp), a:focus {
+    background-size: 100% 2px;
+    background-image: linear-gradient(to right, #0c1f54, #0c1f54);
+    color:#0c1f54;
+    display: felx;
+}
+
+#contenedor_flex p{
+    margin-left: 0.5rem;
+    color:#0c1f54;
+}
+
+#navBar-container #navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 2.5rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    width: 95%;
+}
+
+#navBar-container #facebook {
+    width: 2rem;
+    height: 2rem;
+    fill: #FF0000;
+}
+
+#navBar-container #contenedor_facebook {
+    width: 40%!important;
+}
+
+
+#navBar-container {
+    height: 10rem;
+    width: 100%;
+    background: #ffffff;
+    align-items: baseline;
+}
+
+
+
+
+.big-title {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+#navBar-container {
+    font-family: 'Lato', sans-serif;
+}
+
+/*
+    !Display de desarrollo
+    */
+
+/* #navBar-container{
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+} */
+
+
+    /*
+    !Permite colapsar la lista para que se vea como si fuera un menu de navegación
+    */
+
+#navBar-container>ul {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    justify-content: space-around;
+    align-items: center;
+}
+
+dl,
+ol,
+ul {
+    /* margin-top: 1rem; */
+    margin-bottom: 1rem;
+}
+
+#navBar-container>ul li:not(#logo_text,#contenedor_flex) {
+    display: flex;
+    /* height: 75px; */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#navBar-container #contenedor_facebook #facebook:hover{
+    width: 2.1rem;
+    height: 2.1rem;
+}
+
+
+#navBar-container>ul li:not(#logo_linares_modulares, #contenedor_flex, #logo_text, #contenedor_facebook,#facebook):hover {
+    /*background-color: #0c1f54;
+    */stroke-opacity: 5;
+    /* height: 75px; */
+    width: 100%;
+    display: flex;
+    /* background-color: #0c1f54; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* color:white; */
+    animation-duration: 0.2s;
+    /*animation-iteration-count: infinite;
+    *//*animation-name: cambio_color;
+    */animation-fill-mode: forwards;
+    /*animation-direction: alternate-reverse;
+    */
+    -moz-text-decoration-line: underline;
+}
+
+/* @keyframes cambio_color{ 
+    from{
+        background-color: white;
+    }
+
+    to{
+        background-color :#0c1f54;
+        color:white
+    }
+} */
+
+#navBar-container>ul>li>ul {
+    color: #0c1f54;
+    font-family: 'Raleway', sans-serif;
+}
