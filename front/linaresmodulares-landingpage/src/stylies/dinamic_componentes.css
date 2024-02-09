@@ -1,0 +1,28 @@
+/*!Estilos para cada pagina*/
+
+#servicio-containerUs {
+    background-color: white;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    height: 1200px;
+}
+
+#servicio-containerUs #quienesSomos {
+    display: flex;
+    grid-row: 1/2;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#mancha-service-unidad {
+    position: absolute;
+    width: 57%;
+    height: 96%;
+    pointer-events: none;
+}
+
+#Encabezado li {
+    cursor: pointer;
+}

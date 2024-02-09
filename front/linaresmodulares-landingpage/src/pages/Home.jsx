@@ -17,8 +17,8 @@ export const Home = () => {
     <>
       <Header />
       <Principal />
-      <Services contexto={contexto} />
       <WhoUs />
+      <Services contexto={contexto} />
       <Carrousel />
       <Proyects />
       <AboutUs />

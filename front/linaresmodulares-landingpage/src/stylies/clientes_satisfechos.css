@@ -1,0 +1,123 @@
+/*
+!Proyects - Clientes satisfechos
+*/
+
+#Proyecto_Container {
+
+    /* background-color: #0c1f54; */
+    width: 100%;
+    display: grid;
+    grid-template-rows: 40% 60%;
+    align-items: center;
+    justify-items: center;
+
+}
+
+/*Parte superior proyectos*/
+
+#top_proyects {
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+
+}
+
+#top_proyects ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+#top_proyects p {
+    text-align: center;
+}
+
+#proyect_title {
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 50px;
+}
+
+#Proyecto_cards {
+    grid-row: 2/3;
+    width: 90%;
+
+}
+
+#top_proyects>ul {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    transition: 1s;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content: space-around;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+
+}
+
+#top_proyects>ul>li>ul {
+    display: none;
+    color: white;
+    font-family: 'Archivo', sans-serif;
+
+}
+
+
+
+.Card_proyect {
+    margin-bottom: 10px;
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    border: 3px transparent;
+    border-style: solid;
+    align-items: center;
+
+}
+
+#text_area_Card {
+
+    margin: 50px;
+}
+
+#text_area_Card h1 {
+
+
+    margin: 50px;
+}
+
+#text_area_Card p {
+
+    font-size: 20px;
+    margin: 50px;
+}
+
+#top_proyects {
+    color: white;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#containerCard {
+    width: auto;
+    display: flex;
+
+}
+
+/*!Empresas con las que trabajamos*/
+
+
+#Proyecto_Container {
+    background-color: #ffffff;
+}
