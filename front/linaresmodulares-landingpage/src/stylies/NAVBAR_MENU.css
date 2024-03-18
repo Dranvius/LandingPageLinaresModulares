@@ -2,37 +2,43 @@
 !Navbar - menu 
 */
 
-
 a {
     text-decoration: none;
     font-family: 'PT Sans', sans-serif;
-    font-size: 20px;
-    color:#0c1f54;
 }
 
+#Encabezado{
+    /* background-image: url('C:\Users\SERGIO\Documents\empresa\landing_page_SEO\LandingPageLinaresModulares\front\linaresmodulares-landingpage\src\img\ClubMilitar.png'); */
+    background-color: red;
+    height: 650px;
+    width: 100%;
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+}
+
+
 #navBar-container #logo_linares_modulares {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 #navBar-container p {
     margin-top: 0;
     margin-bottom: 0rem;
+    color: white;
 }
 
 #navBar-container #contenedor_flex{
     display: flex;
-    width: 14rem;
     font-size: 20px;
-    margin-right: 20rem;
-    margin-left: 0.5%;
+    margin-right: 3rem;
+    margin-left: 3.5%;
     align-items: center;
 }
 
 a {
     
     text-decoration: none;
-
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 2px;
@@ -53,24 +59,28 @@ a {
 
 a:hover:not(#facebook,#whatsapp), a:focus {
     background-size: 100% 2px;
-    background-image: linear-gradient(to right, #0c1f54, #0c1f54);
-    color:#0c1f54;
-    display: felx;
+    background-image: linear-gradient(to right, white, white);
+    color:white;
+    display: flex;
 }
 
 #contenedor_flex p{
-    margin-left: 0.5rem;
-    color:#0c1f54;
+    display: flex;
+    width: 215px;
+    margin-left: 2.5%;
+    align-items: center;
 }
 
 #navBar-container #navBar{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-left: 2.5rem;
-    margin-right: 1rem;
-    margin-top: 1rem;
-    width: 95%;
+    width: 89%;
+    height: 76px;
+    background-color: #001955;
+    border-radius: 30px;
+    z-index: 100;
+    position: fixed;
 }
 
 #navBar-container #facebook {
@@ -83,47 +93,31 @@ a:hover:not(#facebook,#whatsapp), a:focus {
     width: 40%!important;
 }
 
-
 #navBar-container {
     height: 10rem;
+    display: flex;
     width: 100%;
-    background: #ffffff;
-    align-items: baseline;
+    justify-content: center;
+    align-items: center;
 }
-
-
-
 
 .big-title {
     font-family: 'Raleway', sans-serif;
 }
-
-
 
 #navBar-container {
     font-family: 'Lato', sans-serif;
 }
 
 /*
-    !Display de desarrollo
-    */
-
-/* #navBar-container{
-    
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-} */
-
-
-    /*
     !Permite colapsar la lista para que se vea como si fuera un menu de navegación
-    */
+*/
 
 #navBar-container>ul {
     width: 100%;
     overflow: hidden;
     position: relative;
+    color: white;
     transition: 1s;
     -webkit-transition: 1s;
     -moz-transition: 1s;
@@ -136,17 +130,16 @@ a:hover:not(#facebook,#whatsapp), a:focus {
 dl,
 ol,
 ul {
-    /* margin-top: 1rem; */
     margin-bottom: 1rem;
 }
 
 #navBar-container>ul li:not(#logo_text,#contenedor_flex) {
     display: flex;
-    /* height: 75px; */
     width: 100%;
     align-items: center;
     justify-content: center;
     text-align: center;
+    cursor: pointer;
 }
 
 #navBar-container #contenedor_facebook #facebook:hover{
@@ -156,37 +149,18 @@ ul {
 
 
 #navBar-container>ul li:not(#logo_linares_modulares, #contenedor_flex, #logo_text, #contenedor_facebook,#facebook):hover {
-    /*background-color: #0c1f54;
-    */stroke-opacity: 5;
-    /* height: 75px; */
+    stroke-opacity: 5;
     width: 100%;
     display: flex;
-    /* background-color: #0c1f54; */
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* color:white; */
     animation-duration: 0.2s;
-    /*animation-iteration-count: infinite;
-    *//*animation-name: cambio_color;
-    */animation-fill-mode: forwards;
-    /*animation-direction: alternate-reverse;
-    */
+    animation-fill-mode: forwards;
     -moz-text-decoration-line: underline;
 }
 
-/* @keyframes cambio_color{ 
-    from{
-        background-color: white;
-    }
-
-    to{
-        background-color :#0c1f54;
-        color:white
-    }
-} */
-
 #navBar-container>ul>li>ul {
-    color: #0c1f54;
     font-family: 'Raleway', sans-serif;
+    color: #FF0000;
 }

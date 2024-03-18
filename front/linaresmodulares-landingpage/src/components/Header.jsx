@@ -1,23 +1,19 @@
 import {
   Link,
-  Button,
-  Element,
-  Events,
   animateScroll as scroll,
-  scrollSpy,
-  scroller,
 } from "react-scroll";
 
 export const Header = () => {
   return (
     <>
       <header id="Encabezado">
+      <div id="contenedor_desplegable">
         <nav id="navBar-container">
           <ul id="navBar">
             <li id="contenedor_flex">
               <img
                 id="logo_linares_modulares"
-                src="../src/img/logo.png"
+                src="../src/img/logoB.png"
                 alt="logo_pic_error_404"
               />
               <p id="logo_text">Linares Modulares</p>
@@ -142,7 +138,8 @@ export const Header = () => {
               </a>
             </li>
           </ul>
-        </nav>
+      </nav>
+      </div>
       </header>
     </>
   );
