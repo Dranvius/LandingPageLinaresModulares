@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: 50% 50%;
     padding: 2rem;
+    height: 800px;
 }
 
 #inputPlaces {
@@ -22,6 +23,14 @@
     margin-bottom: 1rem;
 
 }
+
+#imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 470px;
+}
+
 
 #inputPlaces h1 {
 
@@ -73,14 +82,12 @@ hr {
 .conatcto .col textarea {
 
     display: block;
-
     padding: 18px;
     border: none;
     margin-bottom: 30px;
     background-color: #252a2e;
     color: #fff;
     font-size: 18px;
-
     height: 100px;
     width: 80%;
 }
@@ -90,8 +97,9 @@ hr {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-    height: 100%;
+    height: 20%;
     width: 80%;
+    
 }
 
 #navBar-container>ul {

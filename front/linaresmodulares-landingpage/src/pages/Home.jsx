@@ -16,8 +16,8 @@ export const Home = () => {
   return (
     <>
       <Header />
-      <Principal />
-      <WhoUs />
+      <WhoUs/>
+      {/* <Principal /> */}
       <Services contexto={contexto} />
       <Carrousel />
       <Proyects />

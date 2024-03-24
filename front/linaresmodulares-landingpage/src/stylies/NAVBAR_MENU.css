@@ -4,22 +4,95 @@
 
 a {
     text-decoration: none;
-    font-family: 'PT Sans', sans-serif;
+    font-family: "PT Sans", sans-serif;
 }
 
-#Encabezado{
-    /* background-image: url('C:\Users\SERGIO\Documents\empresa\landing_page_SEO\LandingPageLinaresModulares\front\linaresmodulares-landingpage\src\img\ClubMilitar.png'); */
-    background-color: red;
-    height: 650px;
-    width: 100%;
-    border-bottom-right-radius: 15%;
-    border-bottom-left-radius: 15%;
+.container-body {
+    height: 600px;
 }
 
+.bg-container {
+    display: flex;
+    width: 100% !important;
+    height: 500px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.bg-container h1 {
+    margin-top: 120px;
+    /* color: #001955; */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 65px;
+    font-weight: normal;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.bg-container h5 {
+    margin-top: 1px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-family: "Raleway", sans-serif;
+    text-shadow: 3px 3px 3px rgba(0.5, 0.5, 0.5, 0.5);
+}
+
+#buttom_parte_top {
+    background-color: white;
+    /* Color de fondo */
+    display: block;
+    margin: auto;
+    color: white;
+    /* Color de texto */
+    border: none;
+    /* Quitamos el borde */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    transition: filter 0.6s;
+    /* Transición para el efecto de difuminado */
+}
+
+#buttom_parte_top:hover {
+    filter: blur(0.5px);
+    /* Aplicamos el efecto de difuminado al pasar el ratón sobre el botón */
+}
+
+#principalImgTopImage {
+    display: flex;
+    width: 20%;
+    height: 40%;
+    display: block;
+    margin: auto;
+    align-self: flex-end;
+    position: relative;
+    bottom: 90px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+}
+
+#introducción_TOP_PART {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
 
 #navBar-container #logo_linares_modulares {
-    width: 3rem;
-    height: 3rem;
+    width: 1.9rem;
+    height: 1.9rem;
 }
 
 #navBar-container p {
@@ -28,69 +101,72 @@ a {
     color: white;
 }
 
-#navBar-container #contenedor_flex{
+#navBar-container #contenedor_flex {
     display: flex;
-    font-size: 20px;
+    font-size: 15px;
     margin-right: 3rem;
-    margin-left: 3.5%;
-    align-items: center;
-}
-
-a {
-    
-    text-decoration: none;
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .2s;
-    -webkit-transition: background-size .2s;
-    -moz-transition: background-size .2s;
-    -ms-transition: background-size .2s;
-    -o-transition: background-size .2s;
-    
-}
-
-
-#navbar-icon{
-    width: 20%;
-    margin-left: 1rem;
-    margin-right: 1rem;    
-}
-
-a:hover:not(#facebook,#whatsapp), a:focus {
-    background-size: 100% 2px;
-    background-image: linear-gradient(to right, white, white);
-    color:white;
-    display: flex;
-}
-
-#contenedor_flex p{
-    display: flex;
-    width: 215px;
     margin-left: 2.5%;
     align-items: center;
 }
 
-#navBar-container #navBar{
+a {
+    text-decoration: none;
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    margin-left: 10px;
+    transition: background-size 0.2s;
+    -webkit-transition: background-size 0.2s;
+    -moz-transition: background-size 0.2s;
+    -ms-transition: background-size 0.2s;
+    -o-transition: background-size 0.2s;
+}
+
+#navbar-icon {
+    width: 19%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#icono_wss{
+    fill: white;
+}
+a:hover:not(#facebook, #whatsapp),
+a:focus {
+    background-size: 100% 2px;
+    background-image: linear-gradient(to right, white, white);
+    color: white;
+    display: flex;
+}
+
+#contenedor_flex p {
+    display: flex;
+    width: 200px;
+    margin-left: 4.5%;
+    align-items: center;
+}
+
+#navBar-container #navBar {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 89%;
-    height: 76px;
+    width: 95%;
+    height: 50px;
     background-color: #001955;
-    border-radius: 30px;
+    border-radius: 10px;
     z-index: 100;
     position: fixed;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 100);
 }
 
 #navBar-container #facebook {
-    width: 2rem;
-    height: 2rem;
-    fill: #FF0000;
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #ff0000;
 }
 
 #navBar-container #contenedor_facebook {
-    width: 40%!important;
+    width: 50% !important;
 }
 
 #navBar-container {
@@ -99,14 +175,15 @@ a:hover:not(#facebook,#whatsapp), a:focus {
     width: 100%;
     justify-content: center;
     align-items: center;
+    position: absolute;
 }
 
 .big-title {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
 #navBar-container {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 /*
@@ -130,10 +207,10 @@ a:hover:not(#facebook,#whatsapp), a:focus {
 dl,
 ol,
 ul {
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
 }
 
-#navBar-container>ul li:not(#logo_text,#contenedor_flex) {
+#navBar-container>ul li:not(#logo_text, #contenedor_flex) {
     display: flex;
     width: 100%;
     align-items: center;
@@ -142,13 +219,16 @@ ul {
     cursor: pointer;
 }
 
-#navBar-container #contenedor_facebook #facebook:hover{
-    width: 2.1rem;
-    height: 2.1rem;
+#navBar-container #contenedor_facebook #facebook:hover {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
-
-#navBar-container>ul li:not(#logo_linares_modulares, #contenedor_flex, #logo_text, #contenedor_facebook,#facebook):hover {
+#navBar-container>ul li:not(#logo_linares_modulares,
+    #contenedor_flex,
+    #logo_text,
+    #contenedor_facebook,
+    #facebook):hover {
     stroke-opacity: 5;
     width: 100%;
     display: flex;
@@ -161,6 +241,6 @@ ul {
 }
 
 #navBar-container>ul>li>ul {
-    font-family: 'Raleway', sans-serif;
-    color: #FF0000;
+    font-family: "Raleway", sans-serif;
+    color: #ff0000;
 }

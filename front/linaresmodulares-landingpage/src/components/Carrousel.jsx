@@ -8,11 +8,7 @@ export function Carrousel() {
   return (
     <>
       <div id="container-carusel">
-        <img
-          src="./src/img/Vectorlineas.svg"
-          alt="imagen_quien_somos"
-          id="linea1"
-        />
+
 
         <img
           src="./src/img/mancha2.png"
@@ -37,8 +33,8 @@ export function Carrousel() {
               <Carousel.Item active>
                 <BImg display="block" w="100" src={first_src} />
                 <Carousel.Caption display="none md-block">
-                  <h5 style={{color:'#0c1f54'}}>Escritorios para ministerios de educación</h5>
-                  <p style={{color:'#0c1f54'}}>Escritorios adaptados para entornos laborales</p>
+                  <h5 style={{ color: '#0c1f54' }}>Escritorios para ministerios de educación</h5>
+                  <p style={{ color: '#0c1f54' }}>Escritorios adaptados para entornos laborales</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
@@ -51,8 +47,8 @@ export function Carrousel() {
               <Carousel.Item>
                 <BImg display="block" w="100" src={third_src} />
                 <Carousel.Caption display="none md-block">
-                  <h5 style={{color:'#0c1f54'}}>Recepciones y oficinas para hospital simon bolivar</h5>
-                  <p style={{color:'#0c1f54'}}>Servicios economicos de instalación de oficinas</p>
+                  <h5 style={{ color: '#0c1f54' }}>Recepciones y oficinas para hospital simon bolivar</h5>
+                  <p style={{ color: '#0c1f54' }}>Servicios economicos de instalación de oficinas</p>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel.Inner>
