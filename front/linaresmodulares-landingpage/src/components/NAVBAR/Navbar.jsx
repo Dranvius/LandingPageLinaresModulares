@@ -1,25 +1,69 @@
 import { Link, animateScroll as scroll } from "react-scroll";
-import { ParallaxBanner } from "react-scroll-parallax";
 import {
-  faHouse,  
+  faHouse,
   faGears,
   faHammer,
-  faClipboardUser
+  faClipboardUser,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { React, useState } from "react";
+import "./navbar.css";
 
-export const Header = () => {
-
+export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
     <>
-      <header id="Encabezado">
+      <div id="contenedor">
+        <div className="navbar">
+          <div className="nav_logo">
+            <img
+              id="logo_linares_modulares"
+              src="../src/img/logoB.png"
+              alt="logo_pic_error_404"
+            />
+            <p>Linares Modulares</p>
+          </div>
+
+          <div className={`nav_items ${isOpen && "open"}`}>
+
+            <a href="#" className="items_links">
+            <FontAwesomeIcon icon={faHouse} />
+              Inicio
+            </a>
+
+            <a href="#" className="items_links">
+              <FontAwesomeIcon icon={faGears} />
+              Servicio
+            </a>
+
+            <a href="#" className="items_links">
+              <FontAwesomeIcon icon={faHammer} />
+              Proyectos
+            </a>
+
+            <a href="#" className="items_links">
+              <FontAwesomeIcon icon={faClipboardUser} />
+              Nosotros
+            </a>
+          </div>
+
+          <div
+            className={`nav_toggle ${isOpen && "open"}`}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      {/* <header id="Encabezado">
+        <div id="contenedor_desplegable">
           <nav id="navBar-container">
-            <ul id="navBar">
+            <ul id="navBar" className={`nav_items ${isOpen && "open"}`}>
               <li id="contenedor_flex">
                 <img
                   id="logo_linares_modulares"
@@ -28,7 +72,6 @@ export const Header = () => {
                 />
                 <p id="logo_text">Linares Modulares</p>
               </li>
-
               <li className="nav_items">
                 <FontAwesomeIcon icon={faHouse} />
                 <Link
@@ -44,7 +87,7 @@ export const Header = () => {
                 </Link>
               </li>
               <li className="nav_items">
-              <FontAwesomeIcon icon={faGears} />
+                <FontAwesomeIcon icon={faGears} />
                 <Link
                   className="a"
                   activeClass="active"
@@ -58,7 +101,7 @@ export const Header = () => {
                 </Link>
               </li>
               <li className="nav_items">
-              <FontAwesomeIcon icon={faHammer} />
+                <FontAwesomeIcon icon={faHammer} />
                 <Link
                   className="a"
                   activeClass="active"
@@ -72,7 +115,7 @@ export const Header = () => {
                 </Link>
               </li>
               <li className="nav_items">
-              <FontAwesomeIcon icon={faClipboardUser} />
+                <FontAwesomeIcon icon={faClipboardUser} />
                 <Link
                   className="a"
                   activeClass="active"
@@ -85,42 +128,18 @@ export const Header = () => {
                   Nosotros
                 </Link>
               </li>
+              <div
+                className={`nav_toggle ${isOpen && "open"}`}
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </ul>
           </nav>
-      </header>
-
-      <div className="container-body">
-        <ParallaxBanner
-          layers={[
-            { image: "../src/img/oficina_background.jpg", speed: 20 },
-            {
-              speed: 20,
-              children: (
-                <div className="">
-                  <h1 className="text">INSTALACIÓN DE OFICCINAS</h1>
-                </div>
-              ),
-            },
-          ]}
-          className="bg-container"
-        >
-          <div className="bg-container">
-            <h1 className="">Instalación Empresarial</h1>
-            <h5 className="">Solicita asesoría</h5>
-          </div>
-          <div className="bg-container">
-            <button id="buttom_parte_top">
-            <img
-                    id="facebook"
-                    src="../src/img/icons/navbar/icons8-whatsapp.svg"
-                    alt="logo-facebook"
-                  />
-            </button>
-          </div>
-
-        </ParallaxBanner>
-        <img src="../src/img/oficce.jpg" alt="error_pic" id="principalImgTopImage" />
-      </div>
+        </div>
+      </header> */}
     </>
   );
 };

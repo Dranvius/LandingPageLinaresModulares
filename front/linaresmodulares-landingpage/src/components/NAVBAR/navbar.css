@@ -1,0 +1,158 @@
+#contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navbar {
+  height: 50px;
+  width: 95%;
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+  align-content: center;
+  flex-wrap: nowrap;
+  background-color: #001955;
+  border-radius: 10px;
+  z-index: 100;
+  position: fixed;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 100);
+}
+
+.nav_logo {
+  font-weight: bold;
+  font-size: 15px;
+  margin: 15px;
+  color: white;
+  display: flex;
+}
+
+.nav_items {
+  display: flex;
+}
+
+.nav_items a {
+  margin-right: -14px;
+  color: white;
+  position: relative;
+}
+
+/*^ Menu hamburgesa - sin ser colapsado por responsive*/
+
+.nav_toggle {
+  display: none;
+}
+
+.nav_logo #logo_linares_modulares {
+  width: 1.9rem;
+  height: 1.9rem;
+}
+
+.items_links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 8rem;
+}
+
+/*
+^TEXTO ALADO DEL LOGO
+*/
+
+.navbar p {
+  display: flex;
+  width: 200px;
+  margin-left: 4.5%;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0rem;
+  color: white;
+  font-size: 15px;
+}
+
+/*
+^ANIMACIÓN DE CADA ITEM DEL NAVBAR
+*/
+
+.nav_items a {
+  /* text-decoration: none; */
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  margin-left: 10px;
+  transition: background-size 0.2s;
+  -webkit-transition: background-size 0.2s;
+  -moz-transition: background-size 0.2s;
+  -ms-transition: background-size 0.2s;
+  -o-transition: background-size 0.2s;
+}
+
+.nav_items a:hover:not(#facebook, #whatsapp),
+.nav_items a:focus {
+  background-size: 100% 2px;
+  background-image: linear-gradient(to right, white, white);
+  color: white;
+}
+
+/*
+& TIPOGRAFIA NAVBAR
+*/
+
+.navbar {
+  font-family: "Lato", sans-serif;
+}
+
+/*?MEDIA QUERIES*/
+
+@media (max-width: 768px) {
+  .nav_items {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    background-color: rgb(27, 2, 81);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transform: translateX(-105%);
+    transition: 0.3s ease all;
+  }
+
+  .nav_toggle {
+    display: flex !important;
+    flex-direction: column;
+    margin: 15px;
+  }
+
+  .nav_toggle span {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transform-origin: 5px 0px;
+    transition: all 0.2s linear;
+  }
+
+  .items_links {
+    display: flex;
+  }
+
+  /*?ABRIR Y CERRAR MENU*/
+
+  .nav_items.open {
+    transform: translateX(0%) !important;
+  }
+
+  .nav_toggle.open > span {
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+
+  .nav_toggle.open > span:nth-child(2) {
+    display: none;
+  }
+
+  .nav_toggle.open > span:nth-child(3) {
+    transform: rotate(-45deg) translate(-5px, 1px);
+  }
+}
