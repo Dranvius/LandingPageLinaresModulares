@@ -135,6 +135,15 @@ export const Home = () => {
       "keywords",
       "mobiliario empresarial en Bogotá, muebles de oficina Bogotá, puestos de trabajo modulares, mobiliario corporativo Bogotá, sillas ergonómicas para oficina Bogotá, diseño de oficinas corporativas Bogotá, adecuación de oficinas Bogotá"
     );
+
+    const baseUrl = window.location.origin.replace(/\/$/, "");
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute("href", `${baseUrl}/`);
   }, []);
 
   const handleChange = (field, value) => {

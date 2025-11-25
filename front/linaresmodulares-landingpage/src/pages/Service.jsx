@@ -87,15 +87,46 @@ export function Service() {
   }, [slug]);
 
   useEffect(() => {
-    document.title = `${service.title} | Linares Modulares Bogotá`;
+    const ensureMeta = (name, content, isProperty = false) => {
+      const selector = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+      let meta = document.querySelector(selector);
+      if (!meta) {
+        meta = document.createElement("meta");
+        if (isProperty) {
+          meta.setAttribute("property", name);
+        } else {
+          meta.name = name;
+        }
+        document.head.appendChild(meta);
+      }
+      meta.content = content;
+    };
 
-    let meta = document.querySelector('meta[name="description"]');
-    if (!meta) {
-      meta = document.createElement("meta");
-      meta.name = "description";
-      document.head.appendChild(meta);
+    const baseUrl = window.location.origin.replace(/\/$/, "");
+    const canonicalUrl = `${baseUrl}/servicios/${service.slug}`;
+    const absoluteImage = service.heroImage?.startsWith("http")
+      ? service.heroImage
+      : `${baseUrl}${service.heroImage}`;
+
+    document.title = `${service.title} | Linares Modulares Bogotá`;
+    ensureMeta("description", service.metaDescription);
+    ensureMeta("og:type", "article", true);
+    ensureMeta("og:title", `${service.title} | Linares Modulares Bogotá`, true);
+    ensureMeta("og:description", service.metaDescription, true);
+    ensureMeta("og:url", canonicalUrl, true);
+    ensureMeta("og:image", absoluteImage, true);
+    ensureMeta("twitter:card", "summary_large_image");
+    ensureMeta("twitter:title", `${service.title} | Linares Modulares Bogotá`);
+    ensureMeta("twitter:description", service.metaDescription);
+    ensureMeta("twitter:image", absoluteImage);
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
     }
-    meta.content = service.metaDescription;
+    canonical.setAttribute("href", canonicalUrl);
 
     const structuredData = {
       "@context": "https://schema.org",
@@ -114,6 +145,7 @@ export function Service() {
         areaServed: "Bogotá",
         availability: "https://schema.org/InStock",
       },
+      url: canonicalUrl,
     };
 
     const script = document.createElement("script");
@@ -313,7 +345,7 @@ export function Service() {
               <p>{item.subtitle || item.description}</p>
               <div className="meta-row">
                 <span className="tag">Bogotá</span>
-                <a className="text-link" href={`/servicios/${item.slug}`}>
+                <a className="text-link" href={"/servicios/" + item.slug}>
                   Ver detalle
                 </a>
               </div>
