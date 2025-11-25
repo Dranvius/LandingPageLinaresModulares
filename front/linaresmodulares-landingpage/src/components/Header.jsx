@@ -1,126 +1,29 @@
-import { Link, animateScroll as scroll } from "react-scroll";
-import { ParallaxBanner } from "react-scroll-parallax";
-import {
-  faHouse,  
-  faGears,
-  faHammer,
-  faClipboardUser
-} from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
+import logo from "../img/logoB.png";
+import { servicesList } from "../data/services";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+const navItems = servicesList
+  .filter((service) => service.navLabel)
+  .map((service) => ({ label: service.navLabel, slug: service.slug }));
 
-import { React, useState } from "react";
-
-export const Header = () => {
-
-  const [isOpen, setIsOpen] = useState(false);
-  
+export function Header() {
   return (
-    <>
-      <header id="Encabezado">
-          <nav id="navBar-container">
-            <ul id="navBar">
-              <li id="contenedor_flex">
-                <img
-                  id="logo_linares_modulares"
-                  src="../src/img/logoB.png"
-                  alt="logo_pic_error_404"
-                />
-                <p id="logo_text">Linares Modulares</p>
-              </li>
-
-              <li className="nav_items">
-                <FontAwesomeIcon icon={faHouse} />
-                <Link
-                  className="a"
-                  activeClass="active"
-                  to="Contenedor-top"
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={500}
-                >
-                  Inicio
-                </Link>
-              </li>
-              <li className="nav_items">
-              <FontAwesomeIcon icon={faGears} />
-                <Link
-                  className="a"
-                  activeClass="active"
-                  to="servicios"
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={500}
-                >
-                  Servicios
-                </Link>
-              </li>
-              <li className="nav_items">
-              <FontAwesomeIcon icon={faHammer} />
-                <Link
-                  className="a"
-                  activeClass="active"
-                  to="quienesSomos"
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={500}
-                >
-                  Proyectos
-                </Link>
-              </li>
-              <li className="nav_items">
-              <FontAwesomeIcon icon={faClipboardUser} />
-                <Link
-                  className="a"
-                  activeClass="active"
-                  to="carrusel"
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={500}
-                >
-                  Nosotros
-                </Link>
-              </li>
-            </ul>
-          </nav>
-      </header>
-
-      <div className="container-body">
-        <ParallaxBanner
-          layers={[
-            { image: "../src/img/oficina_background.jpg", speed: 20 },
-            {
-              speed: 20,
-              children: (
-                <div className="">
-                  <h1 className="text">INSTALACIÓN DE OFICCINAS</h1>
-                </div>
-              ),
-            },
-          ]}
-          className="bg-container"
-        >
-          <div className="bg-container">
-            <h1 className="">Instalación Empresarial</h1>
-            <h5 className="">Solicita asesoría</h5>
-          </div>
-          <div className="bg-container">
-            <button id="buttom_parte_top">
-            <img
-                    id="facebook"
-                    src="../src/img/icons/navbar/icons8-whatsapp.svg"
-                    alt="logo-facebook"
-                  />
-            </button>
-          </div>
-
-        </ParallaxBanner>
-        <img src="../src/img/oficce.jpg" alt="error_pic" id="principalImgTopImage" />
+    <header className="lm-header">
+      <div className="lm-header__brand">
+        <NavLink to="/" aria-label="Linares Modulares">
+          <img src={logo} alt="Linares Modulares" className="lm-header__logo" />
+        </NavLink>
       </div>
-    </>
+      <nav className="lm-header__nav" aria-label="Servicios principales">
+        {navItems.map((item) => (
+          <NavLink key={item.slug} to={`/servicios/${item.slug}`} className="lm-header__link">
+            {item.label}
+          </NavLink>
+        ))}
+        <a className="lm-header__cta" href="#contacto">
+          Solicita diagnóstico gratuito
+        </a>
+      </nav>
+    </header>
   );
-};
+}
