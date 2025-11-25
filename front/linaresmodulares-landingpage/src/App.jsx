@@ -7,6 +7,7 @@ export function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/servicios/:slug" element={<Service />} />
       </Routes>
     </BrowserRouter>
   );
