@@ -182,6 +182,14 @@ export const Home = () => {
     }
   };
 
+const steps = [
+  "Diagnóstico gratuito: levantamiento y fotos del espacio en Bogotá",
+  "Render 3D y propuesta económica optimizada por m²",
+  "Fabricación, logística y montaje rápido en calendario corporativo",
+  "Acompañamiento postventa, ajustes y mantenimiento programado",
+];
+
+export const Home = () => {
   return (
     <div className="page" id="inicio">
       <Header />
