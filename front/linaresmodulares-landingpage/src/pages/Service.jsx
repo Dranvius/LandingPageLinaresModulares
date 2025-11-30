@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Header } from "../components/Header";
-import { FloatingCtaBar } from "../components/FloatingCtaBar";
 import { servicesMap, servicesList } from "../data/services";
 
 const process = [
@@ -9,36 +8,6 @@ const process = [
   "Propuesta con renders y cronograma de instalación",
   "Fabricación, logística y montaje coordinado",
   "Ajustes finales, capacitación y postventa",
-];
-
-const contactChannels = [
-  {
-    label: "WhatsApp inmediato",
-    href: "https://wa.me/573193014722",
-    desc: "Coordinamos visita o videollamada",
-  },
-  {
-    label: "Llamada comercial",
-    href: "tel:+573193014722",
-    desc: "Atención prioritaria en Bogotá",
-  },
-  {
-    label: "Correo corporativo",
-    href: "mailto:contacto@linaresmodulares.com",
-    desc: "Envíanos tu RFP o requerimientos",
-  },
-];
-
-const defaultPainPoints = [
-  "Espacios saturados que reducen la productividad",
-  "Falta de ergonomía y confort para equipos híbridos",
-  "Tiempos de entrega inciertos que frenan proyectos",
-];
-
-const defaultMetrics = [
-  "Cronograma validado y fechas de montaje",
-  "Satisfacción del equipo después de la entrega",
-  "Uso eficiente del espacio y estaciones activas",
 ];
 
 const serviceFaqs = {
@@ -112,9 +81,6 @@ export function Service() {
   const relatedServices = useMemo(() => {
     return servicesList.filter((item) => item.slug !== slug).slice(0, 3);
   }, [slug]);
-
-  const painPoints = service.painPoints?.length ? service.painPoints : defaultPainPoints;
-  const metrics = service.metrics?.length ? service.metrics : defaultMetrics;
 
   useEffect(() => {
     setActiveSlide(0);
@@ -221,45 +187,9 @@ export function Service() {
               Volver al inicio
             </a>
           </div>
-          <div className="hero-contact-grid" aria-label="Canales de contacto preferidos">
-            {contactChannels.map((channel) => (
-              <a key={channel.label} className="contact-chip" href={channel.href} target="_blank" rel="noreferrer">
-                <span>{channel.label}</span>
-                <small>{channel.desc}</small>
-              </a>
-            ))}
-          </div>
         </div>
         <div className="hero-figure" aria-hidden="true">
           <img src={service.heroImage} alt={service.title} loading="lazy" />
-        </div>
-      </section>
-
-      <section className="section service-intro" id="detalle">
-        <div className="service-intro__text">
-          <p className="eyebrow">Cobertura en Bogotá y alrededores</p>
-          <h2>Implementamos {service.title} con enfoque en ROI y bienestar</h2>
-          <p className="lead">
-            Detallamos alcance, tiempos y entregables para que tu comité de compras tenga decisiones rápidas y medibles.
-          </p>
-          <ul className="checklist">
-            <li>Briefing rápido con checklists descargables</li>
-            <li>Renders, moodboard y planos listos para aprobación</li>
-            <li>Montaje controlado y reporte de avances diario</li>
-          </ul>
-        </div>
-        <div className="service-intro__panel">
-          <h3>CTA listo para Ads</h3>
-          <p>Configura conversiones de llamada, WhatsApp y formulario desde esta misma página.</p>
-          <div className="cta-stack">
-            <a className="btn primary" href="#contacto" data-ads-conversion="service-cta">
-              Agendar diagnóstico gratuito
-            </a>
-            <a className="btn ghost" href="mailto:contacto@linaresmodulares.com">
-              Solicitar propuesta detallada
-            </a>
-          </div>
-          <p className="mini-note">Incluimos seguimiento y ajustes post-implementación.</p>
         </div>
       </section>
 
@@ -293,30 +223,6 @@ export function Service() {
               <li>Reportes diarios y actas de entrega</li>
               <li>Integración de marketing: etiquetas de conversión y SEO local</li>
             </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="section" id="retos">
-        <div className="grid-split">
-          <div>
-            <p className="eyebrow">Retos que resolvemos</p>
-            <h2>Eliminamos cuellos de botella antes del montaje</h2>
-            <p className="lead">Atacamos los dolores típicos de compras y operaciones para que el mobiliario empiece a producir valor desde el día 1.</p>
-            <ul className="checklist">
-              {painPoints.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="metric-card">
-            <h3>Indicadores clave</h3>
-            <ul>
-              {metrics.map((metric) => (
-                <li key={metric}>{metric}</li>
-              ))}
-            </ul>
-            <p className="mini-note">Reportamos avances diarios y resultados post entrega para tu comité.</p>
           </div>
         </div>
       </section>
@@ -368,17 +274,6 @@ export function Service() {
               </div>
             </div>
           ) : null}
-          <div className="carousel-dots" role="tablist" aria-label="Productos destacados">
-            {service.featuredProducts?.map((item, index) => (
-              <button
-                key={item.name}
-                className={`dot ${index === activeSlide ? "is-active" : ""}`}
-                onClick={() => setActiveSlide(index)}
-                aria-label={`Ver ${item.name}`}
-                aria-pressed={index === activeSlide}
-              ></button>
-            ))}
-          </div>
           <button
             className="carousel-btn"
             aria-label="Producto siguiente"
@@ -497,8 +392,6 @@ export function Service() {
       <div className="footer-note">
         Linares Modulares: puestos modulares, sillas ergonómicas, coworking, salas de juntas y archivo rodante. Atendemos Bogotá y alrededores.
       </div>
-
-      <FloatingCtaBar />
     </div>
   );
 }

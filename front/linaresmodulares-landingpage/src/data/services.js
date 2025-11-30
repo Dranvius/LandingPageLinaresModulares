@@ -31,16 +31,6 @@ export const servicesList = [
       "Plan de mantenimiento y ajuste periódico",
       "Guías de postura y mini capacitaciones",
     ],
-    painPoints: [
-      "Sillería desgastada que reduce la productividad",
-      "Ausencia de mantenimiento preventivo y repuestos",
-      "Incomodidad que incrementa ausentismo y rotación",
-    ],
-    metrics: [
-      "Sillas listas en 7-10 días",
-      "Capacitaciones cortas para nuevos ingresos",
-      "Reportes de mantenimiento y vida útil",
-    ],
     featuredProducts: [
       {
         name: "Silla ejecutiva premium",
@@ -83,16 +73,6 @@ export const servicesList = [
       "Cronograma de obra y montaje",
       "Instalación de mobiliario y archivo",
       "Puesta en marcha y ajustes post entrega",
-    ],
-    painPoints: [
-      "Obra y montaje sin un responsable único",
-      "Retrasos por coordinación de contratistas",
-      "Falta de visibilidad en avances y calidad",
-    ],
-    metrics: [
-      "Entrega llave en mano en 15 días",
-      "Reportes diarios y actas de cierre",
-      "Garantía de instalación y postventa",
     ],
     featuredProducts: [
       {
@@ -137,16 +117,6 @@ export const servicesList = [
       "Diseño modular y cálculo de capacidad",
       "Instalación y capacitación de uso seguro",
     ],
-    painPoints: [
-      "Documentos críticos sin control de acceso",
-      "Espacios desperdiciados por archivo desordenado",
-      "Equipos sin capacidad para crecer en almacenamiento",
-    ],
-    metrics: [
-      "Incremento de capacidad hasta 2x con archivo rodante",
-      "Implementación segura con anclajes y cerraduras",
-      "Planes de mantenimiento para cero reprocesos",
-    ],
     featuredProducts: [
       {
         name: "Archivo rodante de alta densidad",
@@ -188,16 +158,6 @@ export const servicesList = [
       "Diseño de layout de almacenamiento",
       "Instalación rápida y segura",
       "Manual de carga y mantenimiento",
-    ],
-    painPoints: [
-      "Bodegas saturadas sin cálculo de carga",
-      "Desorden que retrasa soporte y logística",
-      "Falta de integración con lockers y archivo",
-    ],
-    metrics: [
-      "Capacidad calculada por nivel y por bahía",
-      "Tiempos de instalación definidos",
-      "Plan de inspección para seguridad operativa",
     ],
     featuredProducts: [
       {
@@ -241,16 +201,6 @@ export const servicesList = [
       "Instalación y fijación segura",
       "Kit de marcadores y borradores",
     ],
-    painPoints: [
-      "Reuniones sin herramientas de colaboración claras",
-      "Tableros que dejan sombra o mancha la escritura",
-      "Necesidad de soluciones móviles para training y equipos híbridos",
-    ],
-    metrics: [
-      "Instalación nivelada en 48-72 horas",
-      "Compatibilidad con accesorios audiovisuales",
-      "Garantía de limpieza y durabilidad de superficie",
-    ],
     featuredProducts: [
       {
         name: "Tablero acrílico mural",
@@ -287,16 +237,6 @@ export const servicesList = [
       "Layouts optimizados por equipos y flujo de trabajo",
       "Renders 3D rápidos para aprobación directiva",
       "Guías de ergonomía y acústica para cada estación",
-    ],
-    painPoints: [
-      "Dificultad para justificar inversión ante comité",
-      "Falta de claridad en flujos y uso del espacio",
-      "Riesgos de ergonomía y acústica no gestionados",
-    ],
-    metrics: [
-      "Renders y layout en menos de 5 días",
-      "Optimización de estaciones por m² y flujo",
-      "Checklist de ergonomía por rol",
     ],
     deliverables: [
       "Plano de distribución con áreas de colaboración y enfoque",
@@ -341,16 +281,6 @@ export const servicesList = [
       "Recomendaciones de sillas y accesorios certificados",
       "Capacitación corta para equipos internos",
     ],
-    painPoints: [
-      "Molestias musculares y ausentismo por malas posturas",
-      "Sillería sin certificaciones ni ajustes",
-      "Equipos que no usan correctamente los accesorios",
-    ],
-    metrics: [
-      "Disminución de quejas en el primer mes",
-      "Capacitaciones de 30 minutos por célula",
-      "Checklist de cumplimiento normativo",
-    ],
     deliverables: [
       "Informe de riesgos ergonómicos y mejoras",
       "Kit de sillas, apoyapiés y brazos monitor",
@@ -391,16 +321,6 @@ export const servicesList = [
       "Planes preventivos y correctivos programados",
       "Reparación y reemplazo de superficies, herrajes y sillas",
       "Reconfiguración modular para ampliaciones",
-    ],
-    painPoints: [
-      "Estaciones dañadas que reducen puestos disponibles",
-      "Falta de SLA claros para soporte en Bogotá",
-      "Crecimiento sin plan de reconfiguración modular",
-    ],
-    metrics: [
-      "SLA definidos para soporte y emergencias",
-      "Inventarios actualizados por cada visita",
-      "Reaprovechamiento de módulos existentes",
     ],
     deliverables: [
       "Inventario técnico y estado de mobiliario",
@@ -443,16 +363,6 @@ export const servicesList = [
       "Equipo dedicado de arquitectura y obra",
       "Reportes diarios y pruebas de funcionamiento",
     ],
-    painPoints: [
-      "Múltiples proveedores sin coordinación",
-      "Cronogramas que se extienden y afectan la operación",
-      "Falta de visibilidad en costos y entregables",
-    ],
-    metrics: [
-      "Oficina lista en 15 días",
-      "Reportes diarios con fotos y avances",
-      "Garantía integral en mobiliario y montaje",
-    ],
     deliverables: [
       "Master plan con hitos y entregables",
       "Fabricación local de mobiliario modular",
@@ -494,16 +404,6 @@ export const servicesList = [
       "Divisiones acústicas y privacidad donde se necesita",
       "Power & data oculto para escritorios ordenados",
       "Modularidad que crece con tu headcount",
-    ],
-    painPoints: [
-      "Puestos improvisados que limitan el trabajo en equipo",
-      "Cableado visible y desordenado que afecta la imagen",
-      "Dificultad para ampliar estaciones sin rehacer la oficina",
-    ],
-    metrics: [
-      "Configuraciones listas en 10-15 días",
-      "Instalación limpia con cableado oculto",
-      "Planes de expansión por módulos",
     ],
     deliverables: [
       "Configuraciones colaborativas e individuales",

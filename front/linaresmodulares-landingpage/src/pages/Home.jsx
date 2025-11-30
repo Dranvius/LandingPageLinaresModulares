@@ -7,7 +7,6 @@ import ergonomic from "../img/deskdarkside.jpg";
 import storage from "../img/archivoRodante.jpg";
 import { Header } from "../components/Header";
 import { servicesList } from "../data/services";
-import { FloatingCtaBar } from "../components/FloatingCtaBar";
 
 const services = servicesList;
 
@@ -101,45 +100,6 @@ const steps = [
   "Entrega llave en mano, ajustes finales y mantenimiento programado",
 ];
 
-const contactShortcuts = [
-  {
-    title: "WhatsApp inmediato",
-    desc: "Coordina visita o videollamada",
-    href: "https://wa.me/573193014722",
-  },
-  {
-    title: "Llamada comercial",
-    desc: "Atención prioritaria en Bogotá",
-    href: "tel:+573193014722",
-  },
-  {
-    title: "Correo corporativo",
-    desc: "Envíanos tu RFP y cotizamos en 24h",
-    href: "mailto:contacto@linaresmodulares.com",
-  },
-];
-
-const trustSignals = [
-  { label: "+150 proyectos", desc: "Oficinas, coworkings y sedes ejecutivas en Bogotá" },
-  { label: "15 días", desc: "Entrega llave en mano con cronograma controlado" },
-  { label: "Soporte postventa", desc: "Mantenimiento y ajustes incluidos" },
-];
-
-const serviceHighlights = [
-  {
-    title: "Arquitectura corporativa",
-    detail: "Diseño, renders y moodboards listos para aprobación de compras",
-  },
-  {
-    title: "Fabricación modular",
-    detail: "Muebles de alto tráfico con cableado oculto y acabados premium",
-  },
-  {
-    title: "Implementación 360°",
-    detail: "Logística, montaje y checklist de calidad sin frenar tu operación",
-  },
-];
-
 export const Home = () => {
   const [formValues, setFormValues] = useState({
     company: "",
@@ -222,6 +182,14 @@ export const Home = () => {
     }
   };
 
+const steps = [
+  "Diagnóstico gratuito: levantamiento y fotos del espacio en Bogotá",
+  "Render 3D y propuesta económica optimizada por m²",
+  "Fabricación, logística y montaje rápido en calendario corporativo",
+  "Acompañamiento postventa, ajustes y mantenimiento programado",
+];
+
+export const Home = () => {
   return (
     <div className="page" id="inicio">
       <Header />
@@ -259,15 +227,6 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="trust-bar" aria-label="Indicadores de confianza">
-        {trustSignals.map((item) => (
-          <div className="trust-item" key={item.label}>
-            <strong>{item.label}</strong>
-            <span>{item.desc}</span>
-          </div>
-        ))}
-      </section>
-
       <section className="section services" id="servicios">
         <div className="section-header">
           <p className="eyebrow">Servicios premium</p>
@@ -297,27 +256,6 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="section pillars" id="metodologia">
-        <div className="section-header">
-          <p className="eyebrow">Metodología 360°</p>
-          <h2>Diseñamos, fabricamos e instalamos sin frenar tu operación</h2>
-          <p className="section-desc">
-            Cada proyecto se gestiona con responsables claros, cronograma validado y métricas de satisfacción para tu equipo.
-          </p>
-        </div>
-        <div className="pillar-grid">
-          {serviceHighlights.map((highlight) => (
-            <article key={highlight.title} className="pillar-card">
-              <h3>{highlight.title}</h3>
-              <p>{highlight.detail}</p>
-              <a className="text-link" href="#contacto">
-                Coordinar diagnóstico →
-              </a>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="section products" id="productos">
         <div className="section-header">
           <p className="eyebrow">Productos estrella</p>
@@ -336,14 +274,6 @@ export const Home = () => {
                 <p className="card-eyebrow">{product.keywords.join(" · ")}</p>
                 <h3 itemProp="name">{product.title}</h3>
                 <p itemProp="description">{product.description}</p>
-                <div className="product-actions">
-                  <a className="btn ghost" href="#contacto">
-                    Solicitar propuesta
-                  </a>
-                  <a className="text-link" href="/servicios/puestos-de-trabajo-modulares">
-                    Ver detalles del servicio
-                  </a>
-                </div>
               </div>
             </article>
           ))}
@@ -409,20 +339,6 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="cta-ribbon" aria-label="Llamado a la acción principal">
-        <div>
-          <p className="eyebrow">Respuesta en menos de 24 horas</p>
-          <h3>Agenda tu diagnóstico gratuito y recibe renders listos para comité</h3>
-          <p>Instalamos puestos modulares, sillas ergonómicas y salas de juntas sin interrumpir tu operación.</p>
-        </div>
-        <div className="cta-ribbon__actions">
-          <a className="btn primary" href="#contacto">Hablar con un asesor</a>
-          <a className="btn ghost" href="https://wa.me/573193014722" target="_blank" rel="noreferrer">
-            WhatsApp inmediato
-          </a>
-        </div>
-      </section>
-
       <section className="section testimonials" id="testimonios">
         <div className="section-header">
           <p className="eyebrow">Testimonios</p>
@@ -437,23 +353,6 @@ export const Home = () => {
                 <span>{test.role}</span>
               </footer>
             </blockquote>
-          ))}
-        </div>
-      </section>
-
-      <section className="section contact-shortcuts" aria-label="Canales rápidos de contacto">
-        <div className="section-header">
-          <p className="eyebrow">Respuesta inmediata</p>
-          <h2>Activa tu diagnóstico gratuito desde el canal que prefieras</h2>
-          <p className="section-desc">Coordinamos visita, video o propuesta express en menos de 24 horas.</p>
-        </div>
-        <div className="shortcut-grid">
-          {contactShortcuts.map((item) => (
-            <a key={item.title} className="shortcut-card" href={item.href} target={item.href.startsWith('http') ? "_blank" : undefined} rel={item.href.startsWith('http') ? "noreferrer" : undefined}>
-              <h3>{item.title}</h3>
-              <p>{item.desc}</p>
-              <span className="text-link">Iniciar ahora →</span>
-            </a>
           ))}
         </div>
       </section>
@@ -542,8 +441,6 @@ export const Home = () => {
           <p className="form-note">Recibe una propuesta personalizada sin costo.</p>
         </form>
       </section>
-
-      <FloatingCtaBar />
     </div>
   );
 };
