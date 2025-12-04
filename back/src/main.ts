@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import { NestFactory } from "@nestjs/core";
 import { ValidationPipe } from "@nestjs/common";
-import * as morgan from "morgan";
+import morgan from "morgan";
 import { AppModule } from "./app.module";
 
 async function bootstrap() {

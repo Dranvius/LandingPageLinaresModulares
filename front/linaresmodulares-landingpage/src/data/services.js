@@ -10,6 +10,8 @@ export const servicesList = [
     slug: "sillas-oficina",
     navLabel: "Sillas",
     title: "Sillas de oficina ergonómicas en Bogotá",
+    shortTitle: "Sillas ergo",
+    shortDesc: "Ergonomia certificada, ajuste y mantenimiento para tus sillas.",
     heroTitle: "Mejora tu productividad con nuestras soluciones para sillas de oficina",
     heroSubtitle:
       "Transformamos tu entorno laboral con mantenimiento, ajuste y ergonomía para sillas de oficina. Diseñamos experiencias cómodas y saludables para tu equipo.",
@@ -57,6 +59,7 @@ export const servicesList = [
     slug: "adecuacion-de-oficinas",
     navLabel: "Oficinas",
     title: "Adecuación integral de oficinas en Bogotá",
+    shortTitle: "Oficinas express",
     heroTitle: "Oficinas listas sin frenar tu operación",
     heroSubtitle:
       "Diseño, fabricación e instalación con un solo proveedor. Coordinamos obra liviana, mobiliario modular y cableado para una entrega express.",
@@ -100,6 +103,7 @@ export const servicesList = [
     slug: "archivadores-corporativos",
     navLabel: "Archivadores",
     title: "Archivadores y almacenamiento corporativo",
+    shortTitle: "Archivadores",
     heroTitle: "Control documental y seguridad para tu oficina",
     heroSubtitle:
       "Archivadores metálicos, bibliotecas y archivo rodante que optimizan espacio y protegen documentos sensibles.",
@@ -143,6 +147,7 @@ export const servicesList = [
     slug: "estanteria-oficina",
     navLabel: "Estantería oficina",
     title: "Estantería y organización de oficina",
+    shortTitle: "Estanteria",
     heroTitle: "Orden visible y accesible para equipos en crecimiento",
     heroSubtitle: "Estantería metálica y de diseño para bodegas ligeras, back office y áreas de soporte.",
     heroImage: heroImage,
@@ -185,8 +190,10 @@ export const servicesList = [
     slug: "tableros-acrilicos",
     navLabel: "Tableros acrílicos",
     title: "Tableros acrílicos y soluciones de colaboración",
+    shortTitle: "Tableros",
     heroTitle: "Ideas claras y reuniones efectivas",
     heroSubtitle: "Tableros acrílicos, vidrio y móviles con accesorios para salas de juntas y training.",
+    shortTitle: "Tableros",
     heroImage: meeting,
     metaDescription:
       "Tableros acrílicos corporativos en Bogotá: fijos y móviles con accesorios para salas de juntas y capacitación.",
@@ -226,6 +233,7 @@ export const servicesList = [
   {
     slug: "diseno-oficinas-corporativas",
     title: "Diseño de oficinas corporativas en Bogotá",
+    shortTitle: "Diseno oficinas",
     heroTitle: "Diseño inteligente con renders y productividad",
     heroSubtitle:
       "Planificamos espacios con renders 3D, flujos productivos y branding corporativo para decisiones rápidas de compras.",
@@ -269,6 +277,7 @@ export const servicesList = [
   {
     slug: "consultoria-ergonomia",
     title: "Consultoría en ergonomía corporativa",
+    shortTitle: "Ergonomia corp",
     heroTitle: "Salud laboral con mobiliario certificado",
     heroSubtitle:
       "Diagnóstico, sillas certificadas, escritorios regulables y capacitación básica para cuidar la salud laboral.",
@@ -311,6 +320,7 @@ export const servicesList = [
   {
     slug: "mantenimiento-mobiliario",
     title: "Mantenimiento y renovación de mobiliario",
+    shortTitle: "Mantenimiento",
     heroTitle: "Soporte recurrente para crecer sin detener la operación",
     heroSubtitle: "Planes preventivos y correctivos, reconfiguración modular y soporte recurrente para crecer sin fricción.",
     heroImage: storage,
@@ -352,6 +362,7 @@ export const servicesList = [
   {
     slug: "proyectos-llave-en-mano",
     title: "Proyectos llave en mano para empresas",
+    shortTitle: "Llave en mano",
     heroTitle: "Oficina lista en 15 días",
     heroSubtitle: "Un solo responsable para diseño, fabricación e instalación completa con reportes diarios.",
     heroImage: modularDesk,
@@ -394,6 +405,7 @@ export const servicesList = [
   {
     slug: "puestos-de-trabajo-modulares",
     title: "Puestos de trabajo modulares",
+    shortTitle: "Puestos modulares",
     heroTitle: "Estaciones configurables para equipos de 2 a 30 personas",
     heroSubtitle: "Divisiones acústicas, cableado limpio y modularidad que crece con tu headcount.",
     heroImage: coworking,

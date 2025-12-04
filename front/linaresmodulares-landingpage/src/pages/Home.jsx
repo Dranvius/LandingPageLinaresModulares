@@ -7,74 +7,90 @@ import ergonomic from "../img/deskdarkside.jpg";
 import storage from "../img/archivoRodante.jpg";
 import { Header } from "../components/Header";
 import { servicesList } from "../data/services";
+import logo from "../img/logoB.png";
 
-const services = servicesList;
+const heroImages = [
+  { src: ergonomic, alt: "Sillas ergonómicas certificadas para oficinas en Bogotá" },
+  { src: modularDesk, alt: "Puestos de trabajo modulares para equipos en crecimiento" },
+  { src: meeting, alt: "Sala de juntas ejecutiva con conectividad oculta" },
+];
+
+const services = servicesList.map((service, idx) => ({
+  ...service,
+  visual: heroImages[idx % heroImages.length].src,
+  label: service.navLabel || service.title,
+  desc: service.summary || service.heroSubtitle || service.metaDescription || "Mobiliario corporativo a la medida.",
+}));
 
 const products = [
   {
     title: "Puestos de trabajo modulares empresariales",
-    description:
-      "Estaciones colaborativas, individuales y premium que se adaptan al crecimiento de tu equipo con cableado limpio y acústica.",
+    description: "Estaciones colaborativas y premium con cableado oculto y acústica cuidada.",
     image: modularDesk,
-    keywords: ["puestos de trabajo modulares", "muebles de oficina Bogotá"],
+    keywords: ["puestos modulares", "muebles de oficina Bogotá"],
   },
   {
-    title: "Sillas ergonómicas para oficina en Bogotá",
-    description: "Sillería certificada con soporte lumbar, ajuste de altura y materiales de alto tráfico para equipos ejecutivos.",
+    title: "Sillas ergonómicas certificadas",
+    description: "Soporte lumbar, ajustes completos y materiales de alto tráfico.",
     image: ergonomic,
-    keywords: ["sillas ergonómicas para oficina Bogotá", "ergonomía corporativa"],
+    keywords: ["sillas ergonómicas", "ergonomía corporativa"],
   },
   {
     title: "Muebles para coworking corporativo",
-    description: "Hot desks, lockers y cabinas phone booth que optimizan el espacio y la rotación de usuarios.",
+    description: "Hot desks, lockers y phone booths para máxima rotación y comodidad.",
     image: coworking,
-    keywords: ["muebles para coworking", "mobiliario empresarial en Bogotá"],
+    keywords: ["muebles coworking", "mobiliario empresarial"],
   },
   {
-    title: "Salas de juntas ejecutivas premium",
-    description: "Mesas a medida con conectividad oculta, sillas directivas y soporte audiovisual listo para reuniones clave.",
+    title: "Salas de juntas ejecutivas",
+    description: "Mesas a medida, sillería directiva y conectividad lista para videollamadas.",
     image: meeting,
-    keywords: ["salas de juntas ejecutivas", "muebles de oficina Bogotá"],
+    keywords: ["salas de juntas", "muebles de oficina premium"],
   },
   {
-    title: "Archivadores y almacenamiento corporativo",
-    description: "Archivo rodante, bibliotecas y cajoneras modulares para controlar documentos, equipos y suministros.",
+    title: "Archivadores y almacenamiento",
+    description: "Archivo rodante, bibliotecas y cajoneras modulares para equipos y documentos.",
     image: storage,
-    keywords: ["archivadores corporativos", "almacenamiento oficinas"],
+    keywords: ["archivo rodante", "almacenamiento corporativo"],
   },
 ];
 
 const differentiators = [
-  { label: "✔ Optimización del espacio", detail: "Layouts modulares que aprovechan cada m² y facilitan el crecimiento." },
-  { label: "✔ Ergonomía certificada", detail: "Sillería y accesorios alineados a normativas de salud laboral." },
-  { label: "✔ Diseño corporativo moderno", detail: "Materiales premium, acabados sobrios y branding aplicado al mobiliario." },
-  { label: "✔ Cumplimiento normativo", detail: "Experiencia en estándares de seguridad y cableado en Bogotá." },
-  { label: "✔ Soluciones escalables", detail: "Módulos que se reconfiguran para equipos híbridos y ampliaciones." },
+  { label: "Diseño estratégico", detail: "Layouts que maximizan m² y productividad." },
+  { label: "Ergonomía certificada", detail: "Cumplimiento de normativas y bienestar del equipo." },
+  { label: "Montaje llave en mano", detail: "Producción, logística e instalación coordinada." },
+  { label: "Branding aplicado", detail: "Materiales, acabados y señalización con tu marca." },
+  { label: "Escalabilidad", detail: "Módulos que se reconfiguran para equipos híbridos." },
+];
+
+const steps = [
+  "Diagnóstico gratuito presencial o virtual en Bogotá",
+  "Layout 3D, moodboard y propuesta económica optimizada",
+  "Fabricación local, logística y montaje sincronizado con tu agenda",
+  "Entrega llave en mano, ajustes y mantenimiento programado",
 ];
 
 const testimonials = [
   {
     name: "Laura Méndez",
-    role: "Gerente de Operaciones, Fintech Bogotá",
-    quote:
-      "Gracias a Linares Modulares optimizamos nuestra oficina y mejoramos el rendimiento del equipo en un 30%. Montaje limpio y en tiempo récord.",
+    role: "Gerente de Operaciones · Fintech Bogotá",
+    quote: "Optimizaron nuestra oficina y el equipo rinde mejor. Montaje limpio y en los tiempos prometidos.",
   },
   {
     name: "Andrés Cárdenas",
-    role: "Director de Compras, Firma Legal",
-    quote:
-      "La sala de juntas ejecutiva quedó impecable. El cableado y la conectividad quedaron ocultos y listos para videoconferencias sin fallas.",
+    role: "Director de Compras · Firma Legal",
+    quote: "La sala de juntas quedó impecable. Conectividad oculta y lista para videoconferencias sin fallas.",
   },
 ];
 
 const projects = [
   {
-    title: "Headquarters tech en Zona T",
+    title: "Headquarters tech · Zona T",
     description: "Puestos colaborativos, phone booths y salas creativas en 450 m² con entrega en 15 días.",
     image: heroImage,
   },
   {
-    title: "Coworking corporativo en Chicó",
+    title: "Coworking corporativo · Chicó",
     description: "Hot desks, lockers y zonas lounge con mobiliario modular de alto tráfico.",
     image: coworking,
   },
@@ -85,22 +101,8 @@ const projects = [
   },
 ];
 
-const seoTargets = [
-  { path: "/mobiliario-empresarial-bogota", keywords: ["mobiliario empresarial en Bogotá", "muebles de oficina Bogotá"] },
-  { path: "/puestos-de-trabajo-modulares", keywords: ["puestos de trabajo modulares", "estaciones colaborativas"] },
-  { path: "/diseno-de-oficinas-corporativas", keywords: ["diseño de oficinas corporativas Bogotá", "optimización de espacios"] },
-  { path: "/sillas-ergonomicas-bogota", keywords: ["sillas ergonómicas para oficina Bogotá", "ergonomía corporativa"] },
-  { path: "/adecuacion-de-oficinas", keywords: ["adecuación de oficinas Bogotá", "proyectos llave en mano"] },
-];
-
-const steps = [
-  "Diagnóstico gratuito con visita o videollamada en Bogotá",
-  "Render 3D, layout y propuesta económica optimizada por productividad",
-  "Fabricación local, logística y montaje coordinado con tu calendario",
-  "Entrega llave en mano, ajustes finales y mantenimiento programado",
-];
-
 export const Home = () => {
+  const [heroIndex, setHeroIndex] = useState(0);
   const [formValues, setFormValues] = useState({
     company: "",
     contact: "",
@@ -111,8 +113,7 @@ export const Home = () => {
   const [formStatus, setFormStatus] = useState("idle");
   const [formError, setFormError] = useState("");
 
-  const apiBase =
-    import.meta.env.VITE_API_URL?.replace(/\/$/, "") || `${window.location.origin.replace(/\/$/, "")}`;
+  const apiBase = import.meta.env.VITE_API_URL?.replace(/\/$/, "") || `${window.location.origin.replace(/\/$/, "")}`;
 
   useEffect(() => {
     document.title = "Mobiliario Empresarial en Bogotá | Linares Modulares";
@@ -144,6 +145,13 @@ export const Home = () => {
       document.head.appendChild(canonical);
     }
     canonical.setAttribute("href", `${baseUrl}/`);
+  }, []);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setHeroIndex((prev) => (prev + 1) % heroImages.length);
+    }, 2000);
+    return () => clearInterval(id);
   }, []);
 
   const handleChange = (field, value) => {
@@ -182,46 +190,52 @@ export const Home = () => {
     }
   };
 
-const steps = [
-  "Diagnóstico gratuito: levantamiento y fotos del espacio en Bogotá",
-  "Render 3D y propuesta económica optimizada por m²",
-  "Fabricación, logística y montaje rápido en calendario corporativo",
-  "Acompañamiento postventa, ajustes y mantenimiento programado",
-];
-
-export const Home = () => {
   return (
     <div className="page" id="inicio">
       <Header />
 
-      <section className="hero hero-overlay">
-        <div className="hero-text">
-          <p className="eyebrow">Especialistas en soluciones corporativas</p>
-          <h1>Mobiliario Empresarial en Bogotá para Oficinas Productivas y Modernas</h1>
-          <p className="subtitle">
-            Transformamos tus espacios de trabajo con soluciones modulares, ergonómicas y corporativas diseñadas para
-            aumentar la productividad de tu empresa.
-          </p>
-          <div className="hero-actions">
-            <a className="btn primary" href="#contacto">
-              Cotiza tu proyecto sin compromiso
-            </a>
-            <a className="btn ghost" href="#contacto">
-              Diagnóstico de oficina gratuito
+      <section className="hero hero-apartment">
+        <div className="hero-shell">
+          <div className="hero-head">
+            <div className="hero-copy">
+              <p className="hero-eyebrow">Adecuacion corporativa de alto nivel</p>
+              <h1>Tu futuro, nuestra mision</h1>
+              <p className="hero-sub">
+                Disenamos, fabricamos e instalamos espacios elite con ergonomia certificada y entrega llave en mano.
+              </p>
+            </div>
+            <a className="btn pill dark" href="#contacto">
+              Conoce mas
             </a>
           </div>
-          <div className="hero-meta">
-            <span>+70% de empresas atendidas en Bogotá</span>
-            <span>Oficinas listas en 15 días</span>
-            <span>Instalación y soporte postventa</span>
+
+          <div className="hero-media">
+            <img key={heroIndex} className="hero-photo" src={heroImages[heroIndex].src} alt={heroImages[heroIndex].alt} />
+            <div className="hero-overlay">
+              <span className="tag">Caso</span>
+              <div>
+                <p className="overlay-title">Lideres en mobiliario corporativo</p>
+                <p className="overlay-desc">Diseno, interiorismo, construccion ligera, mobiliario y mantenimiento preventivo.</p>
+              </div>
+              <a className="overlay-cta" href="#proyectos" aria-label="Ver proyectos">
+                &rarr;
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="hero-media">
-          <div className="hero-card">
-            <img src={heroImage} alt="Oficina moderna en Bogotá" />
-            <div className="hero-card-content">
-              <p>Proveedor integral: diseño, fabricación e instalación</p>
-              <span>Listo para Google Ads y SEO local</span>
+
+          <div className="hero-metrics">
+            <div className="metric">
+              <span className="metric-value">34</span>
+              <span className="metric-label">Proyectos llave en mano</span>
+            </div>
+            <div className="metric">
+              <span className="metric-value">49K</span>
+              <span className="metric-label">m2 disenados y montados</span>
+              <span className="metric-pill">Confiable</span>
+            </div>
+            <div className="metric dark">
+              <span className="metric-value">256M</span>
+              <span className="metric-label">Valor de portafolio ($)</span>
             </div>
           </div>
         </div>
@@ -229,39 +243,55 @@ export const Home = () => {
 
       <section className="section services" id="servicios">
         <div className="section-header">
-          <p className="eyebrow">Servicios premium</p>
-          <h2>Soluciones que integran diseño, fabricación e instalación</h2>
+          <p className="eyebrow">Servicios corporativos</p>
+          <h2>Soluciones integrales de mobiliario y adecuación de oficinas</h2>
           <p className="section-desc">
-            Ofrecemos soluciones completas que integran diseño, fabricación, instalación y optimización de espacios para empresas
-            que buscan eficiencia, comodidad y una imagen corporativa moderna.
+            Desde el layout hasta la instalación final, entregamos espacios coherentes con tu marca, eficientes para tu equipo y listos
+            para campañas de adquisición.
           </p>
         </div>
-        <div className="card-grid">
-          {services.map((service) => (
-            <a key={service.slug} href={`/servicios/${service.slug}`} className="card" itemScope itemType="https://schema.org/Service">
-              <div className="card-top">
-                <p className="card-eyebrow">
-                  {Array.isArray(service.keywords) ? service.keywords.join(" · ") : service.keywords}
-                </p>
-                <h3 itemProp="name">{service.title}</h3>
-                <p className="card-desc" itemProp="description">
-                  {service.summary || service.heroSubtitle || service.metaDescription}
-                </p>
+        <div className="services-grid">
+          {services.map((service) => {
+            const cardKey = service.slug || service.label;
+            const descLimit = 160;
+            const sourceDesc = service.shortDesc || service.desc || "";
+            const displayDesc = sourceDesc.length > descLimit ? `${sourceDesc.slice(0, descLimit)}...` : sourceDesc;
+            const baseTitle = service.shortTitle || service.label || "";
+            const title = baseTitle.length > 18 ? `${baseTitle.slice(0, 17)}...` : baseTitle;
+            return (
+              <a
+                key={cardKey}
+                href={`/servicios/${service.slug}`}
+                className="service-card vega-card"
+              itemScope
+              itemType="https://schema.org/Service"
+              >
+                <div className="service-media fade-photo">
+                  <img src={service.visual} alt={service.label} loading="lazy" />
+                </div>
+                <div className="vega-gradient" />
+                <div className="service-body vega-overlay">
+                  <h3 itemProp="name">{title}</h3>
+                  <p className="card-desc" itemProp="description">
+                    {displayDesc}
+                  </p>
+                <span className="link">Ver mas</span>
               </div>
-              <div className="card-footer">
-                <span className="link">Ver detalles</span>
+              <div className="service-brand-mark">
+                <img src={logo} alt="Linares Modulares" />
               </div>
             </a>
-          ))}
+          );
+          })}
         </div>
       </section>
 
       <section className="section products" id="productos">
         <div className="section-header">
-          <p className="eyebrow">Productos estrella</p>
+          <p className="eyebrow">Línea de productos</p>
           <h2>Mobiliario empresarial listo para crecer</h2>
           <p className="section-desc">
-            Nuestros puestos de trabajo modulares se adaptan al crecimiento de tu empresa, optimizando el espacio y aumentando el rendimiento de tus equipos.
+            Módulos configurables, sillería ergonómica y almacenamiento inteligente para equipos híbridos y en expansión.
           </p>
         </div>
         <div className="product-grid">
@@ -269,9 +299,9 @@ export const Home = () => {
             <article key={product.title} className="product-card" itemScope itemType="https://schema.org/Product">
               <div className="product-image">
                 <img src={product.image} alt={product.title} loading="lazy" itemProp="image" />
+                <div className="product-chip">{product.keywords.join(" · ")}</div>
               </div>
               <div className="product-body">
-                <p className="card-eyebrow">{product.keywords.join(" · ")}</p>
                 <h3 itemProp="name">{product.title}</h3>
                 <p itemProp="description">{product.description}</p>
               </div>
@@ -283,10 +313,8 @@ export const Home = () => {
       <section className="section value" id="propuesta">
         <div className="section-header">
           <p className="eyebrow">Propuesta de valor</p>
-          <h2>Más que muebles, diseñamos espacios empresariales inteligentes</h2>
-          <p className="section-desc">
-            Convertimos tus oficinas en lugares productivos, saludables y alineados con la imagen corporativa de tu negocio.
-          </p>
+          <h2>Espacios inteligentes, listos para tu marca</h2>
+          <p className="section-desc">Integramos ergonomía, estética corporativa y eficiencia operativa en cada proyecto.</p>
         </div>
         <div className="pill-grid">
           {differentiators.map((item) => (
@@ -298,9 +326,9 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="section stats" id="margen">
+      <section className="section stats" id="proceso">
         <div className="stat-card">
-          <h3>Proceso claro y medible</h3>
+          <h3>Proceso claro</h3>
           <ul>
             {steps.map((step) => (
               <li key={step}>{step}</li>
@@ -308,23 +336,20 @@ export const Home = () => {
           </ul>
         </div>
         <div className="stat-card secondary">
-          <h3>SEO local y conversiones</h3>
+          <h3>Impacto en tu equipo</h3>
           <ul>
-            {seoTargets.map((target) => (
-              <li key={target.path}>
-                <strong>{target.path}</strong>
-                <span>{target.keywords.join(" · ")}</span>
-              </li>
-            ))}
+            <li>Productividad +30% con layouts y ergonomía correcta</li>
+            <li>Menos tiempos muertos con cableado y conectividad integrados</li>
+            <li>Espacios listos para visitas, demos y eventos internos</li>
           </ul>
         </div>
       </section>
 
       <section className="section projects" id="proyectos">
         <div className="section-header">
-          <p className="eyebrow">Proyectos realizados</p>
-          <h2>Empresas que ya confían en Linares Modulares</h2>
-          <p className="section-desc">Casos reales con mobiliario modular, ergonomía y montaje express en Bogotá.</p>
+          <p className="eyebrow">Casos reales</p>
+          <h2>Proyectos que ya confían en Linares Modulares</h2>
+          <p className="section-desc">Implementaciones llave en mano con mobiliario modular, ergonomía y montaje express.</p>
         </div>
         <div className="project-grid">
           {projects.map((project) => (
@@ -342,7 +367,7 @@ export const Home = () => {
       <section className="section testimonials" id="testimonios">
         <div className="section-header">
           <p className="eyebrow">Testimonios</p>
-          <h2>Lo que dicen nuestros clientes corporativos</h2>
+          <h2>Lo que dicen nuestros clientes</h2>
         </div>
         <div className="testimonial-grid">
           {testimonials.map((test) => (
@@ -360,19 +385,23 @@ export const Home = () => {
       <section className="section contact" id="contacto" itemScope itemType="https://schema.org/ContactPoint">
         <div className="contact-info">
           <p className="eyebrow">Contacto</p>
-          <h2>Solicita tu diagnóstico gratuito de oficina</h2>
+          <h2>Solicita tu diagnóstico gratuito</h2>
           <p className="section-desc">Recibe una propuesta personalizada sin costo y acelera tu proyecto corporativo.</p>
           <div className="contact-list">
-            <span><strong>Teléfono:</strong> <a href="tel:+573193014722">+57 319 301 4722</a></span>
+            <span>
+              <strong>Teléfono:</strong> <a href="tel:+573193014722">+57 319 301 4722</a>
+            </span>
             <span>
               <strong>Email:</strong> <a href="mailto:contacto@linaresmodulares.com">contacto@linaresmodulares.com</a>
             </span>
-            <span><strong>Ubicación:</strong> Bogotá, Colombia</span>
+            <span>
+              <strong>Ubicación:</strong> Bogotá, Colombia
+            </span>
           </div>
           <div className="map-wrapper" aria-label="Mapa de Linares Modulares en Bogotá">
             <iframe
               title="Mapa Linares Modulares"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.9075710514245!2d-74.1019719!3d4.6286383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99c2b1e466d7%3A0x9f0a219c2f478255!2sBogot%C3%A1!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.9075710514245!2d-74.1019719!3d4.6286383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99c2b1e466d7%3A0x9f0a219c2f478255!2sBogotá!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco"
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
@@ -429,7 +458,7 @@ export const Home = () => {
                 rows="4"
                 value={formValues.message}
                 onChange={(e) => handleChange("message", e.target.value)}
-                placeholder="Cuéntanos sobre tu proyecto, metraje, fechas y necesidades de mobiliario"
+                placeholder="Cuéntanos metraje, fechas y necesidades de mobiliario"
               />
             </label>
           </div>
@@ -438,7 +467,7 @@ export const Home = () => {
           <button className="btn primary" type="submit" disabled={formStatus === "loading"}>
             {formStatus === "loading" ? "Enviando..." : "Solicitar diagnóstico gratuito"}
           </button>
-          <p className="form-note">Recibe una propuesta personalizada sin costo.</p>
+          <p className="form-note">Respuesta en menos de 24 horas hábiles.</p>
         </form>
       </section>
     </div>
